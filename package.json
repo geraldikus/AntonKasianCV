@@ -1,0 +1,21 @@
+{
+  "name": "anton-kasian-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/courier-prime": "^5.2.6",
+    "@fontsource/vt323": "^5.2.6",
+    "gsap": "^3.13.0",
+    "pixi.js": "^8.13.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  }
+}

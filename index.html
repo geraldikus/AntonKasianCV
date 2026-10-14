@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anton Kasian — Frontend / Game Developer</title>
+    <meta
+      name="description"
+      content="Helsinki-based frontend game developer. TypeScript, PixiJS, GSAP, Canvas/WebGL. Playable slot engine and Contra-like platformer."
+    />
+    <meta name="theme-color" content="#f4f1e8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://geraldikus.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anton Kasian — Frontend / Game Developer" />
+    <meta
+      property="og:description"
+      content="Interactive pixel portfolio. TypeScript + PixiJS games you can play in the browser."
+    />
+    <meta property="og:url" content="https://geraldikus.github.io/" />
+    <meta property="og:image" content="https://geraldikus.github.io/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anton Kasian — Frontend / Game Developer" />
+    <meta
+      name="twitter:description"
+      content="Interactive pixel portfolio. TypeScript + PixiJS games you can play in the browser."
+    />
+    <meta name="twitter:image" content="https://geraldikus.github.io/og.png" />
+  </head>
+  <body>
+    <a class="skip" href="#games">Skip to games</a>
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="logo" href="#top">AK</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about">about</a>
+          <a href="#games">games</a>
+          <a href="#experience">xp</a>
+          <a href="#contact">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap">
+        <p class="kicker">boot sequence</p>
+        <h1>
+          <span id="typewriter" class="typewriter"></span><span class="cursor" aria-hidden="true">_</span>
+        </h1>
+        <p class="hero-role">Frontend / Game Developer</p>
+        <p class="hero-meta">TypeScript · PixiJS · Canvas/WebGL · Helsinki, Finland</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://github.com/geraldikus" target="_blank" rel="noreferrer">GitHub</a>
+          <a
+            class="btn btn-ghost"
+            href="https://www.linkedin.com/in/anton-kasian-aa45b2278"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+          <a class="btn btn-ghost" href="/Anton%20Kasian%20CV.pdf" download="Anton Kasian CV.pdf">Download CV</a>
+        </div>
+        <div class="hero-stage">
+          <div id="hero-canvas" class="hero-canvas pixel-box" role="img" aria-label="Playable pixel character collecting skill coins"></div>
+          <div class="hero-hud">
+            <span id="skill-count">SKILLS 0/8</span>
+            <span>this scene uses FSM + object pooling</span>
+          </div>
+          <p class="hero-hint">CLICK / TAP / SPACE TO JUMP · COLLECT THE SKILLS</p>
+        </div>
+      </section>
+
+      <section id="about" class="wrap">
+        <p class="kicker" data-reveal>about</p>
+        <h2 data-reveal>From iOS Team Lead to browser games.</h2>
+        <div class="about-grid">
+          <p data-reveal>
+            Software engineer with 3+ years of commercial experience, now focused on TypeScript, PixiJS,
+            and GSAP for interactive browser games and WebGL apps.
+          </p>
+          <p data-reveal>
+            I design modular game architectures — FSM-driven rounds, mock-and-server backends, reel-spinning
+            slot mechanics, and animation timelines — with a hard bias toward stable 60 FPS on mobile.
+          </p>
+          <p data-reveal>
+            The iOS background is an advantage: I already ship high-load web content inside WKWebView, own
+            REST integrations, and run CI/CD from commit to store.
+          </p>
+        </div>
+      </section>
+
+      <section id="games" class="wrap">
+        <p class="kicker" data-reveal>games</p>
+        <h2 data-reveal>Playable work.</h2>
+        <p data-reveal>Both titles run in the browser. Hit PLAY — no install, no account.</p>
+        <div id="games-list" class="games-list"></div>
+      </section>
+
+      <section id="experience" class="wrap">
+        <p class="kicker" data-reveal>experience</p>
+        <h2 data-reveal>Shipped in production.</h2>
+        <ol id="experience-list" class="timeline"></ol>
+        <div id="education" class="pixel-box edu-card" data-reveal></div>
+      </section>
+
+      <section id="skills" class="wrap">
+        <p class="kicker" data-reveal>skills</p>
+        <h2 data-reveal>The toolbox.</h2>
+        <div id="skills-list"></div>
+      </section>
+
+      <section id="contact" class="wrap">
+        <p class="kicker" data-reveal>contact</p>
+        <h2 data-reveal>Insert coin to start.</h2>
+        <div class="contact-card pixel-box" data-reveal>
+          <ul class="contact-list">
+            <li>Helsinki, Finland</li>
+            <li>
+              Email:
+              <a id="mail-link" href="mailto:1antonkasyan@gmail.com">1antonkasyan@gmail.com</a>
+            </li>
+            <li>
+              Telegram:
+              <a href="https://t.me/Anton_Kasyan" target="_blank" rel="noreferrer">@Anton_Kasyan</a>
+            </li>
+            <li>
+              GitHub:
+              <a href="https://github.com/geraldikus" target="_blank" rel="noreferrer">geraldikus</a>
+            </li>
+          </ul>
+          <a class="btn" href="/Anton%20Kasian%20CV.pdf" download="Anton Kasian CV.pdf">Download CV</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <span>Anton Kasian <span id="year"></span></span>
+      <span>built with TypeScript · PixiJS · Vite</span>
+    </footer>
+
+    <dialog id="play-modal" class="play-modal">
+      <div class="window">
+        <div class="window-chrome">
+          <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span id="play-title">Game</span>
+          <button class="close-btn" type="button" data-close aria-label="Close">X</button>
+        </div>
+        <iframe id="play-frame" class="play-frame" title="Playable game demo" allow="autoplay; fullscreen"></iframe>
+        <div class="window-bar">
+          <button class="btn btn-ghost" id="play-fullscreen" type="button">FULLSCREEN</button>
+          <a class="btn" id="play-source" href="#" target="_blank" rel="noreferrer">SOURCE</a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="build-modal" class="play-modal build-modal">
+      <div class="window">
+        <div class="window-chrome">
+          <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span id="build-title">How it's built</span>
+          <button class="close-btn" type="button" data-close aria-label="Close">X</button>
+        </div>
+        <div id="build-body" class="build-body"></div>
+        <div class="window-bar">
+          <button class="btn" id="build-play" type="button">▶ PLAY</button>
+          <a class="btn btn-ghost" id="build-source" href="#" target="_blank" rel="noreferrer">SOURCE</a>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
