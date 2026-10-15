@@ -60,7 +60,6 @@ function renderBuild(game: Game): string {
       </article>`,
     )
     .join("");
-  const next = build.next.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   return `<p class="build-summary">${escapeHtml(build.summary)}</p>
     <pre class="build-diagram pixel-box">${escapeHtml(build.diagram)}</pre>
     ${sections}
@@ -68,10 +67,6 @@ function renderBuild(game: Game): string {
       <h3>Code</h3>
       <p class="build-file">${escapeHtml(build.snippet.file)}</p>
       <pre class="build-snippet pixel-box"><code>${escapeHtml(build.snippet.code)}</code></pre>
-    </article>
-    <article class="build-section">
-      <h3>What I'd do next</h3>
-      <ul class="points">${next}</ul>
     </article>`;
 }
 

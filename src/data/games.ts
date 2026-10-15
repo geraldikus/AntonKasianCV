@@ -8,7 +8,6 @@ export type BuildDetails = {
   diagram: string;
   sections: BuildSection[];
   snippet: { file: string; code: string };
-  next: string[];
 };
 
 export type Game = {
@@ -85,11 +84,6 @@ GameRoundMachine (FSM)
   }
 }`,
       },
-      next: [
-        "Commit the profiles schema and apply_spin as a migration (the repo currently ships cleanup only).",
-        "Add an RTP simulation harness over the shared win logic.",
-        "Lazy-load the Spine character so the first paint stays light.",
-      ],
     },
     demo: "https://geraldikus.github.io/SlotMachine/",
     repo: "https://github.com/geraldikus/SlotMachine",
@@ -158,11 +152,6 @@ Entity (model)  ◄──►  View (hitBox + collisionBox)`,
   return collisionResult;
 }`,
       },
-      next: [
-        "Object-pool bullets and explosions instead of allocating per shot.",
-        "Migrate the codebase to TypeScript.",
-        "Replace the per-frame entity filter with a spatial grid.",
-      ],
     },
     demo: "https://geraldikus.github.io/Contra/",
     repo: "https://github.com/geraldikus/Contra",
